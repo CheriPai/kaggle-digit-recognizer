@@ -1,5 +1,6 @@
 # kaggle-digit-recognizer
-Entry in Kaggle competition Digit Recognizer.
+Entry in the Kaggle competition, Digit Recognizer.
+
 Uses a convolutional neural network to classify handwritten digits from the MNIST dataset.
 
 ##### Files
