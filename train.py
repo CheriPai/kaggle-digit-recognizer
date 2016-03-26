@@ -72,7 +72,7 @@ sess.run(tf.initialize_all_variables())
 saver = tf.train.Saver()
 
 
-# Train using stochastic gradient descent
+# Train model
 correct_prediction = tf.equal(tf.argmax(y_conv, 1), tf.argmax(y_, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 for i in range(TRAINING_ITERATIONS):
