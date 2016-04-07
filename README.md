@@ -8,4 +8,4 @@ Uses a convolutional neural network to classify handwritten digits from the MNIS
 - [```train.py```](train.py) trains the classifier and writes accuracy to terminal
 
 ##### Results
-Score: 0.97971
+Score: 0.99014
