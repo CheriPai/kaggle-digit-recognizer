@@ -54,7 +54,7 @@ def train_model(pretrain):
         model = build_model()
 
     model.compile(loss="categorical_crossentropy", optimizer="adadelta", metrics=["accuracy"])
-    early_stop = EarlyStopping(monitor="val_loss", patience=10, mode="min")
+    early_stop = EarlyStopping(monitor="val_acc", patience=8, mode="max")
     model.fit(X, y, batch_size=BATCH_SIZE, nb_epoch=100, 
         validation_data=(X_val, y_val), callbacks=[early_stop])
 
