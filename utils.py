@@ -12,6 +12,9 @@ VAL_PROP = 0.10
 
 
 def process_data(fname, mode="TRAIN"):
+    """ Reads data from CSV and converts to 
+        a format digestable to the algorithm
+    """
     df = pd.read_csv(fname)
 
     if mode == "TRAIN":
@@ -25,6 +28,10 @@ def process_data(fname, mode="TRAIN"):
 
 
 def preprocess_X(X):
+    """ Preprocessing steps for input data.
+        Reshapes matrix to (1, 28, 28) and 
+        scales values to range 0 to 1.
+    """
     X = X.as_matrix()
     X = X.reshape((X.shape[0],1,28,28)).astype(float)
     X /= 255
